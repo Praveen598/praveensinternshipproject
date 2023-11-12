@@ -1,0 +1,122 @@
+name: jeennala praveen          gmail: jeennalapraveen@gmail.com                  mobile: 9490822954
+
+----------------------------------------------------------------------------------------------------------------------
+
+simple calculator application:
+------------------------------
+program:
+-------
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        	Scanner sc= new Scanner(System.in);
+		int a= sc.nextInt();
+		int b=sc.nextInt();
+		System.out.println("1.addition");
+		System.out.println("2.subtraction");
+		System.out.println("3.multiplication");
+		System.out.println("4.division");
+		int c=sc.nextInt();
+		if(c==1){
+		System.out.print(a+b);
+		}
+		else if (c==2){
+		System.out.print(a-b);
+		}
+		else if (c==3){
+		System.out.print(a*b);
+		}
+		else{
+		System.out.print(a%b);
+		}
+    }
+}
+
+output:
+-------
+20
+10
+1.addition
+2.subtraction
+3.multiplication
+4.division
+3
+200
+
+--------
+2.   Number guessing Game:-
+------------------------------
+program:
+--------
+import java.util.Random;
+import java.util.Scanner;
+public class praveen` {
+  public static void main(String[]args) {
+    Random Random_number= new Random();
+    int right_guess=Random_number.nextInt(100);
+    int turns=0;
+    Scanner scan=new Scanner(System.in);
+    System.out.println("Guess a number between 1 to 100, You will have 10 turns!" );
+    System.out.println("best of luck!");
+    
+    int guess;
+    int i=0;
+    boolean win=false;
+    while(win==false) {
+      guess=scan.nextInt();
+      turns++;
+    
+    if(guess==right_guess) {
+      win=true;
+    }
+    else if(i>8){
+      System.out.println("You loose! the right answer was: "+right_guess);
+      return;
+    }
+    else if(guess<right_guess){
+      i++;
+      System.out.println("Yor Guess is lower than the right guess! Turns left: "+(10-i));
+      
+      
+      
+    }
+    else if(guess>right_guess) {
+      i++;
+      System.out.println("Your Guess Is Higher Than THe Right Guess! Turns left: "+(10-i));
+      
+    }
+    
+    
+  }
+    System.out.println("YOu win!");
+    System.out.println("Then number was "+right_guess);
+    System.out.println("You used "+turns+" turns to guess the right number");
+    System.out.println("Your score is "+((11-turns)*10)+" out of 100");
+}
+}
+
+
+output:-
+--------
+Guess a number between 1 to 100, You will have 10 turns!best of luck!
+9
+Yor Guess is lower than the right guess! Turns left: 9
+
+9
+Yor Guess is lower than the right guess! Turns left: 8
+7
+6Yor Guess is lower than the right guess! Turns left: 7
+
+6
+Yor Guess is lower than the right guess! Turns left: 6
+9
+Yor Guess is lower than the right guess! Turns left: 5
+89
+Yor Guess is lower than the right guess! Turns left: 499
+Your Guess Is Higher Than THe Right Guess! Turns left: 3
+0
+Yor Guess is lower than the right guess! Turns left: 2
+8
+Yor Guess is lower than the right guess! Turns left: 1
+7
+You loose! the right answer was: 93
